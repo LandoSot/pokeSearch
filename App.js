@@ -1,17 +1,25 @@
 // import stuff
 import React from 'react'
-import {View, Text} from 'react-native'
+import {Platform, View, Text} from 'react-native'
 
 // create stuff
 class App extends React.Component{
   render(){
     return(
-      <View>
+      <View style = {styles.container}>
         <Text>
           Starting project
         </Text>
       </View>
-    )
+    );
+  }
+}
+
+const styles = {
+  container: {
+    borderWidth: 1,
+    flex: 1,
+    marginTop: Platform.OS === "android" ? 24 : 0
   }
 }
 
