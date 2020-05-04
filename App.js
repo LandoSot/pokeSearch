@@ -1,15 +1,15 @@
 // import stuff
 import React from 'react'
 import {Platform, View, Text} from 'react-native'
+import {Button} from 'native-base'
 
 // create stuff
 class App extends React.Component{
   render(){
     return(
       <View style = {styles.container}>
-        <Text>
-          Starting project
-        </Text>
+        <Text>The button is right bellow</Text>
+        <Button><Text>Hello World</Text></Button>
       </View>
     );
   }
