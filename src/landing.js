@@ -17,6 +17,7 @@ export default class Landing extends React.Component{
             <Button
               block = {true}
               style = {styles.btnStyle}
+              onPress = {() => this.props.switchScreen("search")}
             ><Text style = {styles.btnTextStyle}>Start Searching</Text></Button>
           </View>
         </ImageBackground>
