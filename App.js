@@ -35,6 +35,6 @@ export default class App extends React.Component{
 const styles = StyleSheet.create ({
   container: {
     flex: 1,
-    marginTop: Platform.OS === "android" ? 24 : 0
+    // marginTop: Platform.OS === "android" ? 24 : 0
   }
 })
