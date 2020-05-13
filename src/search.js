@@ -1,13 +1,22 @@
 import React from 'react'
 import {Text, View} from 'react-native'
 import {Button, Header, Icon, Input, Item} from 'native-base'
+import PokeLoader from './pokeLoader'
+import SearchPoke from './searchBody'
 
 export default class Search extends React.Component{
   state = {
-    pokeSearch: ""
+    pokeSearch: "",
+    onCall: true
   }
   searchPoke = () => {
-
+    
+  }
+  renderBody = () => {
+    if(this.state.onCall)
+      return(<PokeLoader />)
+    else
+      return(<SearchPoke/>)
   }
 
   render(){
@@ -23,6 +32,7 @@ export default class Search extends React.Component{
             />
           </Item>
         </Header>
+        {this.renderBody()}
       </View>
     )
   }
