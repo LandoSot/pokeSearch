@@ -1,12 +1,27 @@
 import React from 'react'
-import {Text, View} from 'react-native'
+import {Image, StyleSheet, View} from 'react-native'
 
 export default class PokeLoader extends React.Component{
   render (){
     return(
-      <View>
-        <Text>Loading data</Text>
+      <View style = {styles.container}>
+        <Image 
+          source = {{uri: "https://media.tenor.com/images/39d6060576a516f1dd437eafccafbdb1/tenor.gif"}}
+          style = {styles.gifLoading}
+        />
       </View>
     )
   }
 }
+
+const styles = StyleSheet.create ({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  gifLoading: {
+    height: 400,
+    width: 400,
+  }
+})
